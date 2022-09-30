@@ -62,3 +62,36 @@ sleep 2
 done
 ```
 We will be placing all of our commands between do and sleep 2. Sleep delays the loop by 2 seconds so we don't overwhelm our terminal messages for every failed load.
+
+In our code area, we want to start by mounting our drive. This process will keep looking for a new drive and mount it when the previous one is not detectable.
+```
+sudo mount /dev/sda /media/[username]
+```
+
+After the drive is mounted, we can change our directories to the drive's location.
+```
+cd ~
+cd /media/[username]
+```
+
+Now FEH will come into place. I want a looping slideshow of all .jpg files inside of a flash drive, or my floppy disk.
+```
+sudo feh --recursive --fullscreen --auto-zoom --quiet --hide-pointer --slideshow 3 --reload 3 --on-last-slide resume
+```
+These settings, in order, make my images fullscreen, fit to screen, hide the mouse icon, changes between images every 3 seconds, double checks any changes to the flash drive every 3 seconds, and then loops once reaching the last file. You can find a deeper explanation of all FEH settings here.
+
+I am going to add some echo commands that will print what is happening under the hood in terminal. Your code should look similar to this.
+```
+while:
+do
+echo "Mounting drive..."
+sudo mount /dev/sda /media/[username]
+echo "Opening files..."
+cd ~
+cd /media/admin
+sudo feh --recursive --fullscreen --auto-zoom --quiet --hide-pointer --slideshow 3 --reload 3 --on-last-slide resume
+echo "!!! Files not detectable. Starting to remount drive. !!!"
+echo "!!! If no flash drive is detected, please insert now. !!!"
+sleep 2
+done
+```
