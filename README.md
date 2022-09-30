@@ -82,6 +82,7 @@ These settings, in order, make my images fullscreen, fit to screen, hide the mou
 
 I am going to add some echo commands that will print what is happening under the hood in terminal. Your code should look similar to this.
 ```
+echo "Starting slideshow program process."
 while:
 do
 echo "Mounting drive..."
