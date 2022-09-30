@@ -44,7 +44,10 @@ Now we are going to mount our flash drive. There is a chance it doesn't already 
 ```
 df -h
 ```
-You will see your flash drive under Filesystem = /dev/sda and Mounted on = /media/[user name]. The paths might be slightly different based on the type of drive you have.
+You will see your flash drive under Filesystem = /dev/sda and Mounted on = /media/[user name]. The paths might be slightly different based on the type of drive you have. Insert these commands to mount the flash drive manually. If it is already mounted, it will tell you and confirms we are looking for the right paths.
+```
+sudo mount /dev/sda /media/[username]
+```
 
 ### Step 4: Creating a shell file.
 Same or new terminal window, insert these commands.
