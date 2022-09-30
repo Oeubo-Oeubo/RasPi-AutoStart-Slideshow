@@ -78,7 +78,7 @@ Now FEH will come into place. I want a looping slideshow of all .jpg files insid
 ```
 sudo feh --recursive --fullscreen --auto-zoom --quiet --hide-pointer --slideshow 3 --reload 3 --on-last-slide resume
 ```
-These settings, in order, make my images fullscreen, fit to screen, hide the mouse icon, changes between images every 3 seconds, double checks any changes to the flash drive every 3 seconds, and then loops once reaching the last file. You can find a deeper explanation of [all FEH settings here](https://man.finalrewind.org/1/feh/).
+These settings, in order, expands all folders to access their content, make all images fullscreen, images scale to fit to screen, hide the mouse icon, changes between images every 3 seconds, double checks any changes to the flash drive every 3 seconds, and then loops once reaching the last file. You can find a deeper explanation of [all FEH settings here](https://man.finalrewind.org/1/feh/).
 
 I am going to add some echo commands that will print what is happening under the hood in terminal. Your code should look similar to this.
 ```
