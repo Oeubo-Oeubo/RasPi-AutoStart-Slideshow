@@ -1,4 +1,4 @@
-# RasPi-AutoStart-Slideshow
+# How To Run An Automated Slideshow Using A Raspberry Pi & A USB Floppy Disk Reader
 
 ## Description
 This repo covers the process of setting up FEH on a Raspberry Pi to launch a slideshow of images from a plugged-in flash drive, or in this case a floppy disk reader. We will be using a Raspberry Pi 3 B+ and a Tendak floppy disk reader with Verbatim floppy disks .
